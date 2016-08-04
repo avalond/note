@@ -13,7 +13,7 @@ android {
   buildToolsVersion "24.0.1"
   defaultConfig {
     applicationId "avalond.note"
-    minSdkVersion 15
+    minSdkVersion 19
     targetSdkVersion 24
     versionCode 1
     versionName "1.0"
@@ -21,6 +21,7 @@ android {
     jackOptions {
       enabled true
     }
+    signingConfig signingConfigs.debug
   }
   buildTypes {
     release {
@@ -28,7 +29,6 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
-
   packagingOptions {
     exclude 'META-INF/DEPENDENCIES.txt'
     exclude 'META-INF/LICENSE.txt'
@@ -54,6 +54,7 @@ android {
       jniLibs.srcDirs = ['libs']
     }
   }
+  productFlavors {}
 }
 
 dependencies {
@@ -66,10 +67,8 @@ dependencies {
   compile 'com.android.support:design:24.1.1'
   compile 'com.android.support:multidex:1.0.1'
   compile 'com.google.android.agera:agera:1.1.0'
-
   //firebase
   compile 'com.google.firebase:firebase-auth:9.0.0'
-
   //
   compile 'com.orhanobut:logger:1.14'
   debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'

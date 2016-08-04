@@ -3,6 +3,21 @@
     package="avalond.note"
     >
 
+  <uses-sdk
+      android:maxSdkVersion="23"
+      android:minSdkVersion="19"
+      />
+
+
+  <supports-screens
+      android:anyDensity="true"
+      android:largeScreens="true"
+      android:normalScreens="true"
+      android:resizeable="true"
+      android:smallScreens="true"
+      android:xlargeScreens="true"
+      />
+
   <application
       android:name=".NoteApplication"
       android:allowBackup="true"
