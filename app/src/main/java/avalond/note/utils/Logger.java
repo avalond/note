@@ -7,6 +7,7 @@ import avalond.note.BuildConfig;
  */
 
 public class Logger {
+
   static {
     com.orhanobut.logger.Logger.init();
   }
@@ -14,7 +15,8 @@ public class Logger {
   /**
    * i  method.
    */
-  public static void i(String tag, String msg) {
+  public static void i(String tag,String msg) {
+
     if (BuildConfig.DEBUG) {
       com.orhanobut.logger.Logger.t(tag).i(msg);
     }
@@ -23,7 +25,8 @@ public class Logger {
   /**
    * d  method.
    */
-  public static void d(String tag, String msg) {
+  public static void d(String tag,String msg) {
+
     if (BuildConfig.DEBUG) {
       com.orhanobut.logger.Logger.t(tag).d(msg);
     }
@@ -32,16 +35,18 @@ public class Logger {
   /**
    * e  method,get throwable.
    */
-  public static void e(String tag, String msg, Throwable tr) {
+  public static void e(String tag,String msg,Throwable tr) {
+
     if (BuildConfig.DEBUG) {
-      com.orhanobut.logger.Logger.t(tag).e(tr, msg);
+      com.orhanobut.logger.Logger.t(tag).e(tr,msg);
     }
   }
 
   /**
    * w  method.
    */
-  public static void w(String tag, String msg) {
+  public static void w(String tag,String msg) {
+
     if (BuildConfig.DEBUG) {
       com.orhanobut.logger.Logger.t(tag).w(msg);
     }
@@ -50,7 +55,8 @@ public class Logger {
   /**
    * e  method.
    */
-  public static void e(String tag, String msg) {
+  public static void e(String tag,String msg) {
+
     if (BuildConfig.DEBUG) {
       com.orhanobut.logger.Logger.t(tag).e(msg);
     }
@@ -59,14 +65,16 @@ public class Logger {
   /**
    * json  method.
    */
-  public static void json(String tag, String msg) {
+  public static void json(String tag,String msg) {
+
     com.orhanobut.logger.Logger.t(tag).json(msg);
   }
 
   /**
    * xml  method.
    */
-  public static void xml(String tag, String msg) {
+  public static void xml(String tag,String msg) {
+
     com.orhanobut.logger.Logger.t(tag).xml(msg);
   }
 }

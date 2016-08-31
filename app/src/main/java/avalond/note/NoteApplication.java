@@ -11,18 +11,25 @@ import com.squareup.leakcanary.RefWatcher;
  */
 
 public class NoteApplication extends Application {
+
   private RefWatcher mRefWatcher;
 
-  @Override public void onCreate() {
+  @Override
+  public void onCreate() {
+
     super.onCreate();
     mRefWatcher = LeakCanary.install(this);
   }
 
-  @Override public void onLowMemory() {
+  @Override
+  public void onLowMemory() {
+
     super.onLowMemory();
   }
 
-  @Override protected void attachBaseContext(Context base) {
+  @Override
+  protected void attachBaseContext(Context base) {
+
     super.attachBaseContext(base);
     MultiDex.install(this);
   }
