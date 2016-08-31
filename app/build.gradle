@@ -18,9 +18,7 @@ android {
     versionCode 1
     versionName "1.0"
     //   jack java 8  android N new compiler
-    jackOptions {
-      enabled true
-    }
+    jackOptions.enabled=true
     signingConfig signingConfigs.debug
   }
   buildTypes {
