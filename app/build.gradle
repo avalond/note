@@ -69,6 +69,5 @@ dependencies {
   compile 'com.google.firebase:firebase-auth:9.0.0'
   //
   debugCompile 'com.orhanobut:logger:1.14'
-  debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
-  releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+
 }
