@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:design="http://schema.android.com/apk/res/android.support.design"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,5 +12,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="avalond.note.MainActivity"
     >
+
+  <android.support.design.widget.BottomNavigationView
+      android:id="@+id/navigation"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_gravity="start"
+      design:menu="@menu/my_navigation_items"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentStart="true"
+      >
+
+  </android.support.design.widget.BottomNavigationView>
 
 </RelativeLayout>
