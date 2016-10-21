@@ -17,9 +17,6 @@ public class MainActivity extends AppCompatActivity {
 
   private BottomNavigationView navigationView;
 
-
-  private FragmentTransaction fragmentTransaction;
-
   private static final int BOTTOM_ITEM_TITLE_RESTRANT_INDEX = 0;
   private static final int BOTTOM_ITEM_TITLE_ORDER_INDEX = 1;
   private static final int BOTTOM_ITEM_TITLE_USER_INDEX = 2;
@@ -34,10 +31,22 @@ public class MainActivity extends AppCompatActivity {
 
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+
+
+    int types = getIntent().getIntExtra(ConstantType.CONSTANT_TYPE_NAME,0);
+
     // mRecyclerView.addItemDecoration(new DividerItemDecoration(this, mLayoutManager.getOrientation()));
     navigationView = (BottomNavigationView)findViewById(R.id.navigationss);
 
-    fragmentTransaction = getFragmentManager().beginTransaction();
+    if (types == ConstantType.TYPE_NAME_GO_MAIN) {
+      switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX);
+    } else if (types == ConstantType.TYPE_NAME_GO_ORDER) {
+      switchToFragment(BOTTOM_ITEM_TITLE_ORDER_INDEX);
+    } else if (types == ConstantType.TYPE_NAME_GO_USER) {
+      switchToFragment(BOTTOM_ITEM_TITLE_USER_INDEX);
+    } else {
+      switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX); //默认
+    }
 
     navigationView.setOnNavigationItemSelectedListener(item -> {
 
@@ -54,13 +63,14 @@ public class MainActivity extends AppCompatActivity {
         default:
           break;
       }
-      return true;
+      return false;
     });
-    switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX);
+
   }
 
 
   private void switchToFragment(int index) {
+    FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
     hideFragments(fragmentTransaction);
     switch (index) {
       case BOTTOM_ITEM_TITLE_RESTRANT_INDEX:
