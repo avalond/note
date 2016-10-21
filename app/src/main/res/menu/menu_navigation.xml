@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+      android:id="@+id/restrant"
+      android:icon="@drawable/ic_mail_outline_black_24dp"
+      android:title="restrant"
+      />
+
+  <item
+      android:id="@+id/order"
+      android:icon="@drawable/ic_call_black_24dp"
+      android:title="Order"
+      />
+
+  <item
+      android:id="@+id/user"
+      android:icon="@drawable/ic_person_black_24dp"
+      android:title="User"
+      />
+</menu>
