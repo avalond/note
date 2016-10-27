@@ -7,8 +7,8 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import avalond.note.fragment.OrderFragment;
-import avalond.note.fragment.RestrantFragment;
+import avalond.note.fragment.PhoneFragment;
+import avalond.note.fragment.EmailFragment;
 import avalond.note.fragment.UserFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
     switch (index) {
       case BOTTOM_ITEM_TITLE_RESTRANT_INDEX:
         if (mRestrantFragment == null) {
-          mRestrantFragment = RestrantFragment.newInstance();
+          mRestrantFragment = EmailFragment.newInstance();
           fragmentTransaction.add(R.id.fragmentContainer,mRestrantFragment);
         } else {
           fragmentTransaction.show(mRestrantFragment);
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         break;
       case BOTTOM_ITEM_TITLE_ORDER_INDEX:
         if (mOrderFragment == null) {
-          mOrderFragment = OrderFragment.newInstance();
+          mOrderFragment = PhoneFragment.newInstance();
           fragmentTransaction.add(R.id.fragmentContainer,mOrderFragment);
         } else {
           fragmentTransaction.show(mOrderFragment);

@@ -13,16 +13,16 @@ import avalond.note.R;
  * @author by kevin.
  */
 
-public class OrderFragment extends Fragment {
+public class PhoneFragment extends Fragment {
   @Nullable
   @Override
   public View onCreateView(LayoutInflater inflater,@Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
-    View rootView = inflater.inflate(R.layout.order,null);
+    View rootView = inflater.inflate(R.layout.phone,null);
     return rootView;
   }
 
-  public static OrderFragment newInstance() {
-    return new OrderFragment();
+  public static PhoneFragment newInstance() {
+    return new PhoneFragment();
   }
 }
