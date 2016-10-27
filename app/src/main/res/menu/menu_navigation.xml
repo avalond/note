@@ -4,13 +4,13 @@
   <item
       android:id="@+id/restrant"
       android:icon="@drawable/ic_mail_outline_black_24dp"
-      android:title="restrant"
+      android:title="Email"
       />
 
   <item
       android:id="@+id/order"
       android:icon="@drawable/ic_call_black_24dp"
-      android:title="Order"
+      android:title="Phone"
       />
 
   <item

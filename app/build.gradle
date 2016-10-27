@@ -64,5 +64,5 @@ dependencies {
   //firebase
   compile 'com.google.firebase:firebase-auth:9.0.0'
   //
-  debugCompile 'com.orhanobut:logger:1.14'
+  compile 'com.orhanobut:logger:1.14'
 }
