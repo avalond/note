@@ -33,20 +33,20 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
 
-    int types = getIntent().getIntExtra(ConstantType.CONSTANT_TYPE_NAME,0);
+    int types = getIntent().getIntExtra(ConstantType.CONSTANT_TYPE_NAME, 0);
 
     // mRecyclerView.addItemDecoration(new DividerItemDecoration(this, mLayoutManager.getOrientation()));
-    navigationView = (BottomNavigationView)findViewById(R.id.navigationss);
+    navigationView = (BottomNavigationView) findViewById(R.id.navigationss);
 
-    if (types == ConstantType.TYPE_NAME_GO_MAIN) {
-      switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX);
-    } else if (types == ConstantType.TYPE_NAME_GO_ORDER) {
-      switchToFragment(BOTTOM_ITEM_TITLE_ORDER_INDEX);
-    } else if (types == ConstantType.TYPE_NAME_GO_USER) {
-      switchToFragment(BOTTOM_ITEM_TITLE_USER_INDEX);
-    } else {
-      switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX); //默认
-    }
+    //    if (types == ConstantType.TYPE_NAME_GO_MAIN) {
+    //      switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX);
+    //    } else if (types == ConstantType.TYPE_NAME_GO_ORDER) {
+    //      switchToFragment(BOTTOM_ITEM_TITLE_ORDER_INDEX);
+    //    } else if (types == ConstantType.TYPE_NAME_GO_USER) {
+    //      switchToFragment(BOTTOM_ITEM_TITLE_USER_INDEX);
+    //    } else {
+    switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX); //默认
+    // }
 
     navigationView.setOnNavigationItemSelectedListener(item -> {
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
       case BOTTOM_ITEM_TITLE_RESTRANT_INDEX:
         if (mRestrantFragment == null) {
           mRestrantFragment = EmailFragment.newInstance();
-          fragmentTransaction.add(R.id.fragmentContainer,mRestrantFragment);
+          fragmentTransaction.add(R.id.fragmentContainer, mRestrantFragment);
         } else {
           fragmentTransaction.show(mRestrantFragment);
         }
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
       case BOTTOM_ITEM_TITLE_ORDER_INDEX:
         if (mOrderFragment == null) {
           mOrderFragment = PhoneFragment.newInstance();
-          fragmentTransaction.add(R.id.fragmentContainer,mOrderFragment);
+          fragmentTransaction.add(R.id.fragmentContainer, mOrderFragment);
         } else {
           fragmentTransaction.show(mOrderFragment);
         }
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
       case BOTTOM_ITEM_TITLE_USER_INDEX:
         if (mUserFragment == null) {
           mUserFragment = UserFragment.newInstance();
-          fragmentTransaction.add(R.id.fragmentContainer,mUserFragment);
+          fragmentTransaction.add(R.id.fragmentContainer, mUserFragment);
         } else {
           fragmentTransaction.show(mUserFragment);
         }
