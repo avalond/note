@@ -37,16 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     // mRecyclerView.addItemDecoration(new DividerItemDecoration(this, mLayoutManager.getOrientation()));
     navigationView = (BottomNavigationView) findViewById(R.id.navigationss);
+    switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX);
 
-    //    if (types == ConstantType.TYPE_NAME_GO_MAIN) {
-    //      switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX);
-    //    } else if (types == ConstantType.TYPE_NAME_GO_ORDER) {
-    //      switchToFragment(BOTTOM_ITEM_TITLE_ORDER_INDEX);
-    //    } else if (types == ConstantType.TYPE_NAME_GO_USER) {
-    //      switchToFragment(BOTTOM_ITEM_TITLE_USER_INDEX);
-    //    } else {
-    switchToFragment(BOTTOM_ITEM_TITLE_RESTRANT_INDEX); //默认
-    // }
 
     navigationView.setOnNavigationItemSelectedListener(item -> {
 
