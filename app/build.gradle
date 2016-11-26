@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
   signingConfigs {
@@ -18,7 +19,7 @@ android {
     versionCode 1
     versionName "1.0"
     //   jack java 8  android N new compiler
-    jackOptions.enabled = true
+    jackOptions.enabled = false
     signingConfig signingConfigs.debug
   }
   buildTypes {
