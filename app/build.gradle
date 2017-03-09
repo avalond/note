@@ -58,8 +58,9 @@ android {
 
 dependencies {
   compile fileTree(include: ['*.jar'], dir: 'libs')
-  compile 'com.android.support:appcompat-v7:25.0.1'
-  compile 'com.android.support:design:25.0.1'
+  compile 'com.android.support.constraint:constraint-layout:1.0.2'
+  compile 'com.android.support:appcompat-v7:25.2.0'
+  compile 'com.android.support:design:25.2.0'
   compile 'com.android.support:multidex:1.0.1'
   compile 'com.google.android.agera:agera:1.1.0'
   //firebase
