@@ -2,79 +2,76 @@ package avalond.note.utils;
 
 import avalond.note.BuildConfig;
 
+import android.util.Log;
+
 /**
  * @author kevin.
  */
 
 public class Logger {
 
-  static {
-    com.orhanobut.logger.Logger.init();
-  }
+	/**
+	 * i  method.
+	 */
+	public static void i(String tag, String msg) {
 
-  /**
-   * i  method.
-   */
-  public static void i(String tag,String msg) {
+		if (BuildConfig.DEBUG) {
+			Log.i(tag, msg);
+		}
+	}
 
-    if (BuildConfig.DEBUG) {
-      com.orhanobut.logger.Logger.t(tag).i(msg);
-    }
-  }
 
-  /**
-   * d  method.
-   */
-  public static void d(String tag,String msg) {
+	/**
+	 * d  method.
+	 */
+	public static void d(String tag, String msg) {
 
-    if (BuildConfig.DEBUG) {
-      com.orhanobut.logger.Logger.t(tag).d(msg);
-    }
-  }
+		if (BuildConfig.DEBUG) {
+			Log.d(tag, msg);
+		}
+	}
 
-  /**
-   * e  method,get throwable.
-   */
-  public static void e(String tag,String msg,Throwable tr) {
 
-    if (BuildConfig.DEBUG) {
-      com.orhanobut.logger.Logger.t(tag).e(tr,msg);
-    }
-  }
+	/**
+	 * e  method,get throwable.
+	 */
+	public static void e(String tag, String msg, Throwable tr) {
 
-  /**
-   * w  method.
-   */
-  public static void w(String tag,String msg) {
+		if (BuildConfig.DEBUG) {
+			Log.e(tag, msg, tr);
+		}
+	}
 
-    if (BuildConfig.DEBUG) {
-      com.orhanobut.logger.Logger.t(tag).w(msg);
-    }
-  }
 
-  /**
-   * e  method.
-   */
-  public static void e(String tag,String msg) {
+	/**
+	 * w  method.
+	 */
+	public static void w(String tag, String msg) {
 
-    if (BuildConfig.DEBUG) {
-      com.orhanobut.logger.Logger.t(tag).e(msg);
-    }
-  }
+		if (BuildConfig.DEBUG) {
+			Log.w(tag, msg);
+		}
+	}
 
-  /**
-   * json  method.
-   */
-  public static void json(String tag,String msg) {
 
-    com.orhanobut.logger.Logger.t(tag).json(msg);
-  }
+	/**
+	 * e  method.
+	 */
+	public static void e(String tag, String msg, Exception e) {
 
-  /**
-   * xml  method.
-   */
-  public static void xml(String tag,String msg) {
+		if (BuildConfig.DEBUG) {
+			Log.e(tag, msg, e);
+		}
+	}
 
-    com.orhanobut.logger.Logger.t(tag).xml(msg);
-  }
+
+	/**
+	 * e  method.
+	 */
+	public static void e(String tag, String msg) {
+
+		if (BuildConfig.DEBUG) {
+			Log.e(tag, msg);
+		}
+	}
 }
